@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file d10mt.module
+ * Hook implementations typically go inside a .module file
+ */
+
+// namespace:
+// https://www.drupal.org/docs/develop/coding-standards/namespaces
+// If the namespace differs from the namespace of the current file, put a use statement on the top of the file
+
+// This use statement is so we don't have to include the full path below.
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_help().
+ * https://api.drupal.org/api/drupal/core%21modules%21help%21help.api.php/function/hook_help/10
+ * Hook implementations don't need a useful comment, apparently, because you can look it up.
+ * However, we're going to talk about this anyway, because this module is meant to teach beginners
+ * how to do this, not make things convenient for experts.
+ */
+function d10mt_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.d10mt':
+      $output = '';
+      $output .= '<h3>' . t('About d10mt') . '</h3>';
+      $output .= '<p>' . t('This is help for the d10mt module.') . '</p>';
+       return $output;
+    default:
+  }
+}

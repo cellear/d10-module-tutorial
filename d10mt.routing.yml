@@ -1,0 +1,7 @@
+d10mt.hello:
+  path: '/d10mt_hi'
+  defaults:
+    _controller:  Drupal\d10mt\Controller\D10mtController::hiWorld
+    _title: 'Our first route in the d10mt module'
+  requirements:
+    _permission: 'access content'

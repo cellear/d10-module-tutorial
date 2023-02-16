@@ -1,0 +1,5 @@
+name: Drupal 10 Module Tutorial - Step 1
+description: A fully-commented "Hello World module" that assumes no previous knowledge
+type: module
+package: 00 D10 Example Modules
+core_version_requirement: ^9 || ^10
